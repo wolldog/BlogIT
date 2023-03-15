@@ -5,5 +5,30 @@
     --secondary: #436F84;
 }
 
+.navbar {
+    background-color: var(--dark);
+    
 
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--light)
+}
+
+.heading {
+    background: var(--dark);
+    min-height: 15vh;
+    padding: 10px;
+
+}
+
+h1 {
+    background-color: var(--secondary);
+    color: var(--light);
+    display: inline-block;
+    padding: 10px;
+    margin-left: 20pt;
+    min-height: 10vh;
+}
 

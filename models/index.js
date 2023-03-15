@@ -8,7 +8,7 @@ User.hasMany(Post, {
   onDelete: "CASCADE",
 });
 
-//A Post has one User
+//A Post belongs to a User
 Post.belongsTo(User, {
   foreignKey: "user_id",
 });

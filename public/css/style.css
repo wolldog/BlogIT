@@ -7,8 +7,6 @@
 
 .navbar {
     background-color: var(--dark);
-    
-
 }
 
 .navbar a {
@@ -30,5 +28,15 @@ h1 {
     padding: 10px;
     margin-left: 20pt;
     min-height: 10vh;
+}
+
+#postedBy {
+    font-size: small;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 

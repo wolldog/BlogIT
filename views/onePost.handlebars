@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header">
+      <a
+        class="post-heading"
+        href="/post/{{postData.id}}"
+      >{{postData.title}}</a>
+      <h6 id="postedBy">Posted by
+        {{postData.user.username}}
+        on
+        {{formatDate postData.createdAt "DD-MM-YYYY"}}</h6>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{postData.post_text}}</p>
+    </div>
+  </div>
+  <div class="card w-100 m-auto col-md-12">
+    <div class="comment-card w-100 m-auto col-md-10">
+      <form class="row g-3 listing-form">
+        <div class="col-12">
+          <label for="comment" class="form-label">Comment</label>
+          <input
+            type="textarea"
+            class="form-control"
+            id="comment"
+            placeholder="Enter your comment here"
+          />
+        </div>
+        <button
+          id="submit-listing"
+          class="btn btn-secondary"
+          type="submit"
+        >Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

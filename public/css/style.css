@@ -1,42 +1,44 @@
 :root {
-    --light: #f0fbff;
-    --dark: #43545D;
-    --primary: #00A3EC;
-    --secondary: #436F84;
+  --light: #f0fbff;
+  --dark: #43545d;
+  --primary: #00a3ec;
+  --secondary: #436f84;
 }
 
 .navbar {
-    background-color: var(--dark);
+  background-color: var(--dark);
 }
 
 .navbar a {
-    text-decoration: none;
-    color: var(--light)
+  text-decoration: none;
+  color: var(--light);
 }
 
 .heading {
-    background: var(--dark);
-    min-height: 15vh;
-    padding: 10px;
-
+  background: var(--dark);
+  min-height: 15vh;
+  padding: 10px;
 }
 
 h1 {
-    background-color: var(--secondary);
-    color: var(--light);
-    display: inline-block;
-    padding: 10px;
-    margin-left: 20pt;
-    min-height: 10vh;
+  background-color: var(--secondary);
+  color: var(--light);
+  display: inline-block;
+  padding: 10px;
+  margin-left: 20pt;
+  min-height: 10vh;
 }
 
 #postedBy {
-    font-size: small;
+  font-size: small;
 }
 
 .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.btn-secondary {
+  background-color: var(--secondary);
+}

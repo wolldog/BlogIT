@@ -1,12 +1,12 @@
-<div class="card">
-  <div class="card-header">
-    <h5>{{title}}</h5>
-    <h6 id="postedBy">Posted by {{user.username}}
-      on
-      {{formatDate createdAt "DD-MM-YYYY"}}</h6>
-  </div>
+<div class="card" id="postCard" href="/post/{{id}}">
+  <a href="/post/{{id}}" class="btn"><div class="card-header">
+      <h5>{{title}}</h5>
+      <h6 id="postedBy">Posted by
+        {{user.username}}
+        on
+        {{formatDate createdAt "DD-MM-YYYY"}}</h6>
+    </div></a>
   <div class="card-body">
-    <p class="card-text">{{post_text}}With supporting text below as a natural
-      lead-in to additional content.</p>
+    <p class="card-text">{{post_text}}</p>
   </div>
 </div>

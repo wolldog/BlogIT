@@ -16,17 +16,22 @@
 
 .heading {
   background: var(--dark);
-  min-height: 15vh;
-  padding: 10px;
+  min-height: 10vh;
+  min-width: 50vh;
+  padding: 10px 10px 10px;
+  
 }
 
 h1 {
-  background-color: var(--secondary);
+  background-color: var(--dark);
   color: var(--light);
   display: inline-block;
   padding: 10px;
   margin-left: 20pt;
   min-height: 10vh;
+  min-width: 35vh;
+  align-items: center;
+  justify-content: center;
 }
 
 #postedBy {

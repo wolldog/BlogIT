@@ -37,10 +37,10 @@
             
             {{#if loggedIn}}
             <li class="nav-item px-3">
-              <a class="nav-link" role="button" id="dashboard">Dashboard</a>
+              <a class="nav-link" href="/dashboard" id="dashboard">Dashboard</a>
             </li>
              <li class="nav-item px-3">
-              <a class="nav-link" role="button" id="logout">Logout</a>
+              <a class="nav-link" id="logout">Logout</a>
             </li>
             
             {{else}}
@@ -48,7 +48,7 @@
               <a class="nav-link" href="/login">Dashboard</a>
             </li>
             <li class="nav-item px-3">
-              <a href="/login" class="nav-link">Login</a>
+              <a class="nav-link" href="/login" >Login</a>
             </li>
             {{/if}}
             
@@ -57,10 +57,6 @@
         </div>
       </div>
     </nav>
-    <div id="title" class="heading">
-      <h1>blog IT </h1>
-    </div>
-    <div>
       {{{body}}}
     </div>
   </body>

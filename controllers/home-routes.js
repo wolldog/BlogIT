@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const { Post, User } = require("../models");
+const { Post, User, Comment } = require("../models");
 // Import the custom middleware
-const withAuth = require("../utils/auth");
+// const withAuth = require("../utils/auth");
 
 
 // GET all posts for homepage
@@ -21,6 +21,7 @@ router.get("/", async (req, res) => {
       posts,
       loggedIn: req.session.loggedIn,
     });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -33,19 +34,23 @@ router.get("/post/:id", async (req, res) => {
   try {
     const dbPostData = await Post.findByPk(req.params.id, {
       include: [
-        {
-          model: User,
-          attributes: ["username"],
-        },
-      ],
+        { model: User, attributes: ["username"]},
+        { model: Comment, where: {post_id: req.params.id}, include: [{ model: User, attributes: ["username"] }], required: false}
+      ]
     });
-    
 
     const postData = dbPostData.get({ plain: true });
-    console.log(postData)
+
+    const commentData = dbPostData.comments.map((comment) => comment.get({ plain: true }));
+
+  
+
+    
+    // console.log(JSON.stringify(postData))
 
     res.render("onePost", { 
-      postData, 
+      postData,
+      commentData, 
       loggedIn: req.session.loggedIn });
 
   } catch (err) {
@@ -68,6 +73,15 @@ router.get("/login", (req, res) => {
 // Signup route
 router.get("/signup", (req, res) => {
   res.render("signup");
+});
+
+// Login route
+router.get("/dashboard", (req, res) => {
+ 
+  res.render("dashboard", {
+    loggedIn: req.session.loggedIn,
+  }
+  );
 });
 
 

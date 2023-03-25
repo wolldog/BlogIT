@@ -9,11 +9,24 @@
     </div>
     <div class="card-body">
       <p class="card-text">{{postData.post_text}}</p>
+      <p class="card-text">{{postData.comments.comment_text}}</p>
     </div>
   </div>
-  <div>
 
+  {{#if commentData}}
+    <div class="card">
+      <div class="card-header p-3"></div>
+          <div class="card-body">
+          {{#each commentData as | comment |}}
+            {{> comment }}
+          {{/each}} 
+          </div>
+        </div>
+    </div>
   </div>
+  {{/if}}
+  
+<div class="container mt-5">
   <div class="card">
     <div class="card-header p-3"></div>
     <div class="comment-card w-100 m-auto col-md-10">
@@ -36,5 +49,8 @@
     </div>
   </div>
 </div>
+</div>
+
+
 
 <script src="/js/onePost.js"></script>

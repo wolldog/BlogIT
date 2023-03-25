@@ -1,15 +1,5 @@
-
-    <div class="container mt-5">
-  <div class="card">
-    <div class="card-header">
-      <h5>{{commentData.username}}</h5>
-      <h6 id="postedBy">Posted by
-        {{commentData.comment_text}}
-        on
-        {{formatDate commentData.createdAt "DD-MM-YYYY"}}</h6>
-    </div>
-    <div class="card-body">
-      <p class="card-text">{{commentData.createdAt "DD-MM-YY"}}</p>
-    </div>
-  </div>
-  <div>
+<div>
+  <p class="card-text">
+    {{comment_text}}
+  </p>
+</div>

@@ -47,3 +47,10 @@ h1 {
 .btn-secondary {
   background-color: var(--secondary);
 }
+
+.author {
+  font-size: smaller;
+  font-style: italic;
+}
+
+.new

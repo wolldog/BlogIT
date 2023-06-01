@@ -1,0 +1,19 @@
+<div id="title" class="heading">
+   <h1>Your Dashboard</h1>
+</div>
+
+<div class="container-fluid mt-5">
+   <div>
+   {{#each myPosts as |myPost|}}
+ 
+      {{> myPost}}
+   
+   {{/each}} 
+   </div>
+
+
+
+<button id="newPost" href="/api/post/newPost" class="btn btn-secondary">+ Add Post</button>
+
+</div>
+<script>"js/dashboard.js"</script>
